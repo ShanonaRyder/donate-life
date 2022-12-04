@@ -70,7 +70,7 @@ h1 {
     padding: 10px 32px;
     text-decoration: none;
     font-size: 15pt;
-    margin: 20px 20px;
+    margin: 20px 30px;
     cursor: pointer;
     border-radius: 25px;
     float: right;
@@ -129,6 +129,7 @@ h1 {
 }
 .left-text{
     box-sizing: border-box;
+    padding-left: 10%;
     padding-right: 10%;
     text-align: left;
     font-family: 'Work Sans', sans-serif;
@@ -144,10 +145,16 @@ h2{
     font-size: 40pt;
     padding-top:10%;
 }
-.block img {
+.left-block img {
     padding-top: 5%;
     padding-right: 5%;
     float: left;
+}
+.right-block img {
+    padding-top: 5%;
+    padding-right: 2%;
+    padding-left: 5%;
+    float: right;
 }
 footer {
     display: flex;
