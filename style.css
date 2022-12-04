@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
+@import url('https://css.gg/instagram.css');
+@import url('https://css.gg/facebook.css');
+@import url('https://css.gg/twitter.css');
 
 body {
-    background-image: url(images/oregon-landscape.jpg);
     background-color: white;
-    background-repeat: no-repeat;
-    background-size: cover;
     color: white;
     margin: auto;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     font-size: 15pt;
     text-align: center;
+}
+.home{
+    background-image: url(images/oregon-landscape.jpg);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .home-info {
     display: flex;
@@ -52,18 +58,44 @@ h1 {
     cursor: pointer;
     border-radius: 25px; 
 }
-.navbar img{
+.top-navbar img{
     float:left;
     height: 88px;
 }
-.navbar {
+.top-navbar {
+    overflow: hidden;
+    background-color: #005677;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.top-navbar a{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 60px;
+    text-decoration: none;
+    font-size: 18pt;
+}
+.top-navbar a:hover{
+    background: #32A64C;
+    color: white;
+}
+.bottom-navbar img{
+    float:left;
+    height: 88px;
+}
+.bottom-navbar {
     overflow: hidden;
     background-color: #005677;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
-.navbar a{
+.bottom-navbar a{
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
     float: right;
@@ -74,7 +106,57 @@ h1 {
     text-decoration: none;
     font-size: 18pt;
 }
-.navbar a:hover{
+.bottom-navbar a:hover{
     background: #32A64C;
     color: white;
 }
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #97C0E6;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+}
+
+.left {
+    padding-top: 35px;
+    padding-left: 40px;
+}
+.center{
+    display: inline-block;
+    padding-top: 35px;
+}
+.right{
+    padding: 25px 20px 25px 20px;
+}
+
+.right div {
+    box-sizing: border-box;
+    padding: 30px;
+}
+ul {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    font-size:10pt;
+    line-height: 25px;
+    text-align: left;
+    list-style-type: none;
+    position: relative;
+    right: 10%;
+    bottom: 13px;
+}
+
+ul a{
+    text-decoration: none;
+    color: black;
+}
+
+ul a:hover{
+    text-decoration:underline;
+}
+
+
