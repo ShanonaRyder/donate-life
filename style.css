@@ -11,6 +11,8 @@ body {
     font-weight: 400;
     font-size: 15pt;
     text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .home{
     background-image: url(images/oregon-landscape.jpg);
@@ -58,6 +60,21 @@ h1 {
     cursor: pointer;
     border-radius: 25px; 
 }
+
+.nav-button{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    background-color:#F57F29;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-decoration: none;
+    font-size: 15pt;
+    margin: 20px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    float: right;
+}
 .top-navbar img{
     float:left;
     height: 88px;
@@ -102,7 +119,7 @@ h1 {
     display: block;
     color: white;
     text-align: center;
-    padding: 30px 60px;
+    padding: 30px 70px;
     text-decoration: none;
     font-size: 18pt;
 }
@@ -110,13 +127,33 @@ h1 {
     background: #32A64C;
     color: white;
 }
-
+.left-text{
+    box-sizing: border-box;
+    padding-right: 10%;
+    text-align: left;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15pt;
+    color: black;
+}
+h2{
+    display: inline-block;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    color: black;
+    font-size: 40pt;
+    padding-top:10%;
+}
+.block img {
+    padding-top: 5%;
+    padding-right: 5%;
+    float: left;
+}
 footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #97C0E6;
-    position: fixed;
     width: 100vw;
     bottom: 0;
 }
