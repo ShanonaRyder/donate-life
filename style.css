@@ -138,23 +138,74 @@ h1 {
     color: black;
 }
 h2{
-    display: inline-block;
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
     color: black;
     font-size: 40pt;
     padding-top:10%;
+    padding-left: 10%;
+    text-align: left;
 }
-.left-block img {
+h3{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    color: black;
+    font-size: 15pt;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: left;
+}
+h4{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 15pt;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.donation img {
     padding-top: 5%;
     padding-right: 5%;
     float: left;
 }
-.right-block img {
+.our-story img {
     padding-top: 5%;
     padding-right: 2%;
     padding-left: 5%;
     float: right;
+}
+.staff {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5%;
+}
+.staff div {
+    box-sizing: border-box;
+    color:black;
+    width: 371px;
+}
+.staff div p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.staff img{
+    border-radius: 25px;
+    width: 365px;
+    height: 365px;
+}
+.staff a {
+    font-size: 10pt;
+    padding-left: 80%;
+    color: black;
 }
 footer {
     display: flex;
