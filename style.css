@@ -4,6 +4,7 @@
 @import url('https://css.gg/facebook.css');
 @import url('https://css.gg/twitter.css');
 
+
 *{
     box-sizing: border-box;
 }
@@ -27,44 +28,69 @@ body {
     text-align: left;
     padding: 0px 30px 0 30px;
 }
-main{
+.info-cards{
     background-image: url(images/oregon-landscape.jpg);
     background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-}
-.home-info {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 8%;
-    padding: 12% 8% 5% 8%
+    padding: 12% 8% 14% 8%
 }
-.home-info div {
-    box-sizing: border-box; 
-    background: black;
+.container:hover .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+.container {
+    perspective: 1000px;
     width: 290px;
     height: 290px;
-    opacity: 0.7;
-    border-radius: 25px;
-    padding: 22px;
 }
+.card {
+    position: relative;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+}
+.card-front,
+.card-back{
+    height: 100%;
+    width: 100%;
+    background: black;
+    border-radius: 25px;
+    opacity: 0.7;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.card img{
+    box-sizing: border-box;
+    width: 290px;
+    height: 165px;
+    margin-bottom: 30px;
+}
+.card-back{
+    transform: rotateY(180deg);
+}
+
 h1 {
     font-family: 'Work Sans', sans-serif;
     font-weight: 600; 
-    font-size: 70pt;
-    line-height: 15%;
+    font-size: 40pt;
     text-align: center;
+    margin: 20px;
 }
-h2 {
-    font-family: 'Pacifico', cursive;
-    font-size: 44pt;
-    line-height: 65px;
-    margin-top: 28%;
-    padding-left: 30px;
-    text-align: left;
+#card{
+    font-size: 20pt;
+    margin: 35% 8% 50% 8%;
+}
+#card2{
+    font-size: 20pt;
+    margin: 30% 8% 50% 8%;
 }
 h3{
     font-family: 'Work Sans', sans-serif;
@@ -90,21 +116,148 @@ h3{
     cursor: pointer;
     border-radius: 25px; 
 }
-.hope-stories{
-    display: flex;
-    justify-content: center;
-    padding-top: 6%;
-}
-.stories{
-    display: inline-block;
-    background-color: #32A64C;
-    padding: 0;
-    width: 380px;
+
+.slider{
+    width: 1179px;
     height: 500px;
+    overflow: hidden;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 1s;
+  }
+  
+  .slide img{
+    width: 1179px;
+    height: 500px;
+  }
+  
+  .navigation-manual{
+    position: absolute;
+    width: 1179px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: right;
+    padding-right: 2%;
+  }
+  
+  .manual-btn{
+    border: 3px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 30px;
+  }
+  
+  .manual-btn:hover{
+    background: white;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 1179px;
+    justify-content: right;
+    padding-right: 2%;
+    margin-top: 460px;
+  }
+  
+  .navigation-auto div{
+    border: 3px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 30px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: white;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: white;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: white;
+  }
+
+  #wrapper {
+	position: absolute;
+    margin: -2.5% 0% 0% 38%;
+	animation:pulse 1s infinite;
 }
 
+#pulsingheart { 
+  position: relative; 
+  width: 90px; 
+  height: 80px;
+} 
+
+#pulsingheart:before, #pulsingheart:after { 
+  position: absolute; 
+  content: ""; 
+  left: 50px; 
+  top: 0; 
+  width: 50px; 
+  height: 80px; 
+  background: #aa0000; 
+  border-radius: 50px 50px 0 0; 
+  transform: rotate(-45deg);  
+  transform-origin: 0 100%;
+  animation:pulsecolor 1s infinite;
+} 
+
+#pulsingheart:after { 
+  left: 0; 
+  transform: rotate(45deg); 
+  transform-origin :100% 100%;
+  animation:pulsecolor 1s infinite;
+}
+
+@keyframes pulse {
+	10% {transform: scale(1.1)}
+}
+
+@keyframes pulsecolor {
+  10% {background: #dd0000}
+}
 .what-we-do div{
-    padding: 0% 20% 0% 20%;
+    padding: 2% 20% 2% 20%;
+    margin: 0;
     text-align: center;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
@@ -208,8 +361,17 @@ h4{
     color: black;
     font-size: 40pt;
     text-align: center;
-    margin: 80px 0px 0px 0px;
+    margin: 3% 8% 0% 0%;
     padding: 0;
+}
+#events-title{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    color: black;
+    font-size: 40pt;
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 h5{
     font-family: 'Work Sans', sans-serif;
@@ -261,7 +423,6 @@ h6{
     margin-bottom: 10px;
     text-align: left;
 }
-
 .staff img{
     border-radius: 25px;
     width: 365px;
@@ -277,7 +438,6 @@ h6{
     padding-left: 60%;
     color: white;
 }
-
 .events-box {
     margin: 2% 12% 9% 12%;
 

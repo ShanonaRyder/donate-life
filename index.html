@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://use.typekit.net/uhn4hmu.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,36 +12,91 @@
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="images/favicon.ico?">
 <body class="home">
-    <main>
-        <div class="home-info">
-            <div>
-                <h1>20</h1>
-                <p>Each day, <strong>20 people die</strong> waiting for an organ.</p>
+    <section class="info-cards">
+        <div class="container">
+            <div class="card">
+                <div class="card-front">
+                    <h1>20</h1>
+                    <img src="images/icon1.png" alt="">
+                </div>
+                <div class="card-back">
+                    <p id="card">Each day, <strong>20 people die</strong> waiting for an organ.</p>
+                </div>
             </div>
-            <div>
-                <h1>9</h1>
-                <p>Another person is added to the waiting list <strong>every 9 minutes.</strong></p>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="card-front">
+                    <h1>9</h1>
+                    <img src="images/icon2.png" alt="">
+                </div>
+                <div class="card-back">
+                    <p id="card2">Another person is added to the waiting list <strong>every 9 minutes.</strong></p>
+                </div>
             </div>
-            <div>
-                <h1>125</h1>
-                <p>One donor can give life, sight and health to <strong>more than 125 people.</strong></p>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="card-front">
+                    <h1>125</h1>
+                    <img src="images/icon3.png" alt="">
+                </div>
+                <div class="card-back">
+                    <p id="card2">One donor can give life, sight and health to <strong>more than 125 people.</strong></p>    
+                </div>
             </div>
         </div>
         <a href="https://www.donatelifenw.org/content/register-now" class="button">Become a Registered Donor Today!</a>
-    </main>
-    <section class="hope-stories">
-        <div>
-            <img src="images/stories.jpg" alt="a woman with dark hair and white cardigan standing outside">
+    </section>
+    <section class="slideshow">
+    <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          
+          <div class="slide first">
+            <img src="images/slideshow1.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images/slideshow2.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images/slideshow3.jpg" alt="">
+          </div>
+          
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+
         </div>
-        <div class="stories">
-            <h2>Stories of Hope</h2>
-            <h3>Juana Hernandez</h3>
-            <p id="hope-text">Even at her sickest, Juana Hernandez believed in helping her family and community. With her Donor's kidney, she has much more energy to continue serving those 
-                around her.</p>
-            <a href="#readmore">Read More</a>
+        
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
         </div>
+        
+      </div>
+      
+      <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 3){
+          counter = 1;
+        }
+      }, 5000);
+      </script>
+        
     </section>
     <section class="what-we-do">
+        <div id="wrapper">
+            <div id="pulsingheart"></div>
+        </div>
         <h4 id="home-title">What We Do</h4>
             <div>
                 <p>We save lives and improve health through the promotion of organ, eye and tissue donation. Through our various <a href="#programs">outreach programs</a>, we reach thousands 
