@@ -92,15 +92,6 @@ h1 {
     font-size: 20pt;
     margin: 30% 8% 50% 8%;
 }
-h3{
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
-    color: white;
-    margin: auto;
-    font-size: 15pt;
-    padding-left: 30px;
-    text-align: left;
-}
 .button {
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
@@ -339,7 +330,7 @@ h3{
     font-size: 15pt;
     color: black;
 }
-h4{
+h2{
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
     color: black;
@@ -373,7 +364,7 @@ h4{
     padding: 0;
     margin: 0;
 }
-h5{
+h3{
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
     color: black;
@@ -382,7 +373,7 @@ h5{
     margin-bottom: 0;
     text-align: left;
 }
-h6{
+h4{
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     color: black;
